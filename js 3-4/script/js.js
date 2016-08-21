@@ -1,16 +1,17 @@
 test = {
 
-  container: function createContainer() {
+  createContainer: function() {
     var newContainer = document.createElement('div');
     newContainer.className = 'container-fluid';
     document.body.insertBefore(newContainer, document.body.firstChild);
     return newContainer;
     },
 
-  form: function createForm(parent) {
+  createForm: function(parent) {
     var newForm = document.createElement('form');
+    newForm.setAttribute('action', ' ');
     newForm.setAttribute('method', 'POST');
-    newForm.setAttribute('role', 'form');
+    newForm.className = 'col-lg-6 col-lg-offset-3';
     parent.appendChild(newForm);
     var newHeader =document.createElement('h3');
     newHeader.className = 'text-center';
@@ -20,7 +21,7 @@ test = {
   },
 
 
-  list: function createList(parent) {
+  createList: function(parent) {
     var newList = document.createElement('ol');
     parent.appendChild(newList);
     for(var i = 1; i < 4; i++){
@@ -28,13 +29,13 @@ test = {
       listItem.innerHTML = 'Вопрос №' + i;
       newList.appendChild(listItem);
       for(var j = 1; j < 4; j++){
-   	    this.input(listItem, i, j);
+   	    this.addInput(listItem, i, j);
       }
     }
   },
 
 
-  input: function createInput (parent, i, j) {
+  addInput: function(parent, i, j) {
     var checkbox = document.createElement('div');
     checkbox.className = 'checkbox';
     parent.appendChild(checkbox);
@@ -49,9 +50,9 @@ test = {
   },
 
 
-  button: function createButton(parent) {
+  createButton: function(parent) {
     var col = document.createElement('div');
-    col.className = 'col-lg-12 text-center';
+    col.className = 'text-center';
     parent.appendChild(col);
     var newButton = document.createElement('button');
     newButton.setAttribute('type', 'submit');
@@ -61,7 +62,7 @@ test = {
   }
 }
 
-var newContainer = test.container();
-var newForm = test.form(newContainer);
-test.list(newForm);
-test.button(newForm);
+var newContainer = test.createContainer();
+var newForm = test.createForm(newContainer);
+test.createList(newForm);
+test.createButton(newForm);
