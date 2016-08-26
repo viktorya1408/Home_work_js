@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta lang="en">
+	<title>Таймер-2</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+      	<div class="col-lg-8 col-lg-offset-2">
+      	  <div class="text-center text-danger">
+      	    <span class="counter-main">00:00:00</span><span class="counter-branch">.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="col-lg-2 col-lg-offset-3">
+      	  <input type="button" value="Start" class="btn btn-default btn-block start-button" style="color: #000">
+      	  </input>
+      	</div>
+        <div class="col-lg-2">
+          <input type="button" value="Split" class="btn btn-default btn-block split-button" style="color: #000">
+          </input>
+        </div>
+      	<div class="col-lg-2">
+      	  <input type="button" value="Reset" class="btn btn-default btn-block reset-button" style="color: #000">
+      	  </input>
+      	</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 result-timer"></div>
+      </div>
+    </div> 
+  	<script src='script/js.js'></script>
+  </body>
+</html>
