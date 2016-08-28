@@ -1,6 +1,7 @@
 var switchButton = 0;
 var timerPanel = document.getElementsByClassName('counter-main')[0];
 var milisecPanel = document.getElementsByClassName('counter-branch')[0];
+var buttonStart = document.getElementsByClassName('start-button')[0];
 var hh = 0;
 var mm = 0;
 var ss = 0;
@@ -16,19 +17,22 @@ function switchStart() {//реакция на нажатие start
     switchButton = 1;
     timeStart = Date.now();
     startTimer();
-    document.getElementsByClassName('btn-success')[0].value = 'Pause';
+    buttonStart.value = 'Pause';
+    buttonStart.className = 'btn btn-info btn-block timer-button start-button';
   }
   else if (switchButton == 1) {
     switchButton = 2;
     timePause = Date.now();
-    document.getElementsByClassName('btn-success')[0].value = 'Continue';
+    buttonStart.value = 'Continue';
+    buttonStart.className = 'btn btn-success btn-block timer-button start-button';   
     clearTimeout(changeTime);
   }
   else {
     switchButton = 1;
     timeDifference = timeDifference + Date.now() - timePause;
     startTimer();
-    document.getElementsByClassName('btn-success')[0].value = 'Pause';
+    buttonStart.value = 'Pause';
+    buttonStart.className = 'btn btn-info btn-block timer-button start-button';
   }
 }
 
@@ -36,9 +40,10 @@ function clearStart() {//реакция на нажатие clear
   switchButton = 0;
   timePause = 0;
   timeDifference = 0;
-  document.getElementsByClassName('btn-success')[0].value = 'Start';
-  document.getElementsByClassName('counter-main')[0].innerHTML='00:00:00';
-  document.getElementsByClassName('counter-branch')[0].innerHTML='0';
+  buttonStart.value = 'Start';
+  timerPanel.innerHTML='00:00:00';
+  milisecPanel.innerHTML='0';
+  buttonStart.className = 'btn btn-success btn-block timer-button start-button';
   clearTimeout(changeTime);
 }
 
@@ -78,7 +83,7 @@ function updateTime() {//вывод на экран значений тайме�
   timerPanel.innerHTML = h + ':' + m + ':' + s;
 }
 
-var startSwitch = document.getElementsByClassName('btn-success')[0];
+var startSwitch = document.getElementsByClassName('start-button')[0];
 startSwitch.addEventListener('click', switchStart);
 
 var startClear = document.getElementsByClassName('btn-danger')[0];

@@ -2,6 +2,7 @@ var switchButton = 0;
 var timerPanel = document.getElementsByClassName('counter-main')[0];
 var milisecPanel = document.getElementsByClassName('counter-branch')[0];
 var resultBlock = document.getElementsByClassName('result-timer')[0];
+var buttonStart = document.getElementsByClassName('start-button')[0];
 var hh = 0;
 var mm = 0;
 var ss = 0;
@@ -26,12 +27,12 @@ function switchStart() {//реакция на нажатие start stop
       prevStop = timeNow;
     }
     startTimer();
-    document.getElementsByClassName('start-button')[0].value = 'Stop';
+    buttonStart.value = 'Stop';
   }
   else {
     switchButton = 0;
     timeStop = Date.now();
-    document.getElementsByClassName('start-button')[0].value = 'Start';
+    buttonStart.value = 'Start';
     clearTimeout(changeTime);
     pressStop();
   }
@@ -72,9 +73,9 @@ function clearStart() {//реакция на нажатие clear
   timeDifference = 0;
   timeStop = 0;
   prevStop = 0;
-  document.getElementsByClassName('start-button')[0].value = 'Start';
-  document.getElementsByClassName('counter-main')[0].innerHTML='00:00:00';
-  document.getElementsByClassName('counter-branch')[0].innerHTML='.000';
+  buttonStart.value = 'Start';
+  timerPanel.innerHTML='00:00:00';
+  milisecPanel.innerHTML='.000';
   clearResult();
   clearTimeout(changeTime);
 }
@@ -102,7 +103,7 @@ function startTimer() {//таймер
       else {
         milisecPanel.innerHTML = '.' + ms;
       }       
-       timerPanel.innerHTML = updateCounter();
+      timerPanel.innerHTML = updateCounter();
       startTimer();
       },
     10)
