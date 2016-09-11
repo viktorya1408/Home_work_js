@@ -37,15 +37,30 @@ $(function() {
     .jcarouselControl({
       target: '+=1'
   });   
-  $('.jcarousel-pagination')
+/*  $('.jcarousel-pagination')
     .on('jcarouselpagination:active', 'a', function() {
       $(this).addClass('active');
     })
     .on('jcarouselpagination:inactive', 'a', function() {
       $(this).removeClass('active');
     })
-    .jcarouselPagination();
-    
+    .jcarouselPagination();*/
+  $('.jcarousel-pagination')
+     .on('jcarouselpagination:active', 'a', function(e) {
+         $(this).addClass('active');
+     })
+     .on('jcarouselpagination:inactive', 'a', function(e) {
+         $(this).removeClass('active');
+     })
+     .on('click', function(e) {
+         e.preventDefault();
+     })
+     .jcarouselPagination({
+         perPage: 1,
+         item: function(page) {
+             return '<a href="#' + page + '">' + page + '</a>';
+         }});
+
   $('.jcarousel').jcarouselAutoscroll({
     interval: 5000,
     target: '+=1',
