@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta lang="en">
+	  <title>Задание 11-12</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.jcarusel.css">    
+	  <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-2.2.4.js"></script>
+    <script src="script/jquery.jcarusel.js"></script>
+    <script src="script/microTemplates.js" charset="utf-8"></script>   
+    <script src="script/lodash.js" charset="utf-8"></script>  
+    <script src='script/js.js'></script>
+  </head>
+  <body>
+    <div class="jcarusel">
+      <ul>
+        <li><img src="img/img1.jpg"></li>
+        <li><img src="img/img2.jpg"></li>
+        <li><img src="img/img3.jpg"></li>
+        <li><img src="img/img4.jpg"></li>
+        <li><img src="img/img5.jpg"></li>
+        <li><img src="img/img6.jpg"></li>
+        <li><img src="img/img7.jpg"></li>
+        <li><img src="img/img8.jpg"></li>              
+      </ul>
+    </div>
+    <div class="shablon">
+      <div class="page" id="templ">
+        <h1>Шаблонизатор Джонa Резига</h1>
+        <script type="text/template" id="template-profile">
+          <div class="block"> 
+            <h2><%= name %></h2>
+            <div class="photo">
+              <img src="img/<%= photo %>" alt="It's me">
+            </div>
+            <p><%= past %></p>
+          </div>
+          <div class="block">
+            <p class="indented"><%= why %></p>
+            <ul>
+              <% for(var i = 0; i < reason.length; i++) { %>
+              <li><%= reason[i] %></li>
+              <% }; %>  
+            </ul>
+          </div>
+          <div class="block">
+            <p class="indented">Мой контактный телефон<br><%= phone %></p>
+            <p><a href=<%= link %> target="_blank">Мой профиль в Фейсбук</a>
+            </p>
+          </div>
+          <div class="last-block">
+            <p>Мой фидбек:<br><%= feedback %></p>
+          </div>
+        </script> 
+      </div>
+      <div class="page" id="lodash">
+        <h1>Шаблонизатор Lodash</h1>      
+        <script type="text/template" id="template-profile">
+          <div class="block"> 
+            <h2><%= name %></h2>
+            <div class="photo">
+              <img src="img/<%= photo %>" alt="It's me">
+            </div>
+             <p><%= past %></p>
+          </div>
+          <div class="block">
+            <p class="indented"><%= why %></p>
+            <ul>
+              <% for(var i = 0; i < reason.length; i++) { %>
+              <li><%= reason[i] %></li>
+              <% }; %>  
+            </ul>
+          </div>
+          <div class="block">
+            <p class="indented">Мой контактный телефон<br><%= phone %></p>
+            <p><a href=<%= link %> target="_blank">Мой профиль в Фейсбук</a>
+            </p>
+          </div>
+          <div class="last-block">
+            <p>Мой фидбек:<br><%= feedback %></p>
+          </div>
+        </script> 
+      </div>      
+    </div>
+  </body>
+</html>

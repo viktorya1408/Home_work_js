@@ -1,0 +1,66 @@
+body { 
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.shablon {
+  margin: 0  auto;
+  max-width: 1200px;
+  min-width: 600px;
+  padding: 30px 20px;
+  text-align: center;
+ }
+.page {
+  background-color: white;
+  border: 2px solid LightGray;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  height: 90%;
+  line-height: 1.5;
+  margin: 20px 0;
+  max-width: 49.5%;
+  min-width: 500px;
+}
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+.block {
+  border-bottom: 2px solid LightGray;		
+  margin: 30px 20px;
+  padding: 0 20px;
+}
+.last-block {
+  margin: 20px 20px;
+  padding: 0 20px;
+}
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+.photo {
+  margin: 20px 0;	
+  text-align: center;
+}
+.photo img {
+  height: 150px;
+}
+.indented {
+  margin-bottom: 10px;
+}
+.page p {
+  padding-bottom: 15px;
+  text-align: justify;	
+}
+.page ul {
+  list-style: initial;
+  margin-left: 25px;
+  padding-bottom: 15px;	
+  text-align: justify;
+}
+a {
+  color: blue;
+}
+
