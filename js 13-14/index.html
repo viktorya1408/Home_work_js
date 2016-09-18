@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta lang="ru">
+	<title>Задание 13-14</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-2.2.4.js"></script>
+    <script src="script/lodash.js"></script> 
+    <script src="script/js.js"></script>
+  </head>
+  <body>
+    <div class="templ-test">
+      <script type="text/template" id="test">
+        <div class="container-fluid">
+          <form action=" " method="POST" class="col-lg-6 col-lg-offset-3">
+            <h1 class="text-center"><%= topic %></h1>
+            <ol>
+              <% for(var i = 0; i < data.length; i++) { %>
+                <li><%= data[i].task %></li>
+                <% for(var j = 0; j < data[i].variants.length; j++) { %>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="<%= 'test' + (i+1) %>" value="<%= (j+1) %>"><%= data[i].variants[j] %>
+                    </label>
+                  </div>
+                <% }; %>
+              <% }; %> 
+            </ol>
+            <div class="text-center">
+              <button type="submit" class="btn btn-info btn-lg">Проверить мои результаты</button>
+            </div>
+          </form>
+        </div>          
+      </script>
+    </div>
+    <div class="templ-modal">
+      <div class="overlay"></div>
+      <div class="modal-block">
+        <span id="modal_close">X</span>
+        <button type="reset" class="btn btn-primary btn-lg">Попробовать ещё раз</button>
+       </div>
+    </div>
+  </body>
+</html>
