@@ -18,12 +18,12 @@ var data = {
 
 
 // шаблонизатор Джона резига
-  var html = $('#template-profile').html();
+  var html = $('#template-profile1').html();
   var content = tmplJR(html, data);
   $('#templ').append(content);
 
 // шаблонизатор Lodash
-  var tmpl = _.template($('#template-profile').html());
+  var tmpl = _.template($('#template-profile2').html());
   var content1 = tmpl(data);
   $('#lodash').append(content1);
 

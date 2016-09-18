@@ -3,7 +3,7 @@
   $.fn.jcarusel = function (options) {
  
     var $carusel = this;
-    console.log($carusel);
+
     var defaults = {
       showItem : 3 // Количество слайдов для показа по умолчанию
     }
