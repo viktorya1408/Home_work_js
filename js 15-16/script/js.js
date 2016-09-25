@@ -63,7 +63,7 @@ var $searchKey;
 
 // вторая часть задания с прототипами
 
-/*  function Human(name, age, gender, height, weight) {
+  function Human(name, age, gender, height, weight) {
     this.name = name;
     this.age = age;
     this.gender = gender;
@@ -112,7 +112,7 @@ var $searchKey;
   student2.watchSeries();
   var student3 = new Student('Ann', 20, 'female', 160, 55, 'college', 600);
   console.log(student3);
-  student3.watchSeries();*/
+  student3.watchSeries();
 
 });
 
