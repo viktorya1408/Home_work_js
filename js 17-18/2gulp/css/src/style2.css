@@ -1,0 +1,47 @@
+form {
+  background: #7FC7FF;
+  border: 10px solid #4169E1;
+  border-radius: 14px;
+  margin-top: 40px;
+  padding: 12px;
+}
+fieldset {
+  border-bottom: 1px solid #fff;
+  padding: 10px 0 20px;
+}
+label {
+  color: #095A97;
+  display: inline-block;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+  width: 85px;
+}
+.input-group {
+  line-height: 20px;
+  padding: 10px;
+  position: relative;
+}
+.show-help {
+  background-color: #4169E1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  height: 29px;
+  margin: 15px 10px 5px;
+  width: 90px;
+}
+.tooltip {
+  background: #4B77F9;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px #fff;  
+  color: #fff;
+  display: none;
+  font-size: 14px;
+  height: 25px;
+  left: 300px;
+  line-height: 25px;
+  padding-left: 10px;
+  position: absolute;
+  top: 8px;
+  width: 300px;
+}   
