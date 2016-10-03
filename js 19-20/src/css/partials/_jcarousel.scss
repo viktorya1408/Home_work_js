@@ -1,0 +1,57 @@
+.jcarousel-wrapper{
+  margin: 0 auto;  
+  position: relative;  
+  width: 100%;
+} 
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+}
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+}
+.jcarousel li {
+  float: left;
+}
+.jcarousel-pagination {
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,0);
+}
+.jcarousel-pagination a {
+    background-color: white;
+    border: none;
+    box-sizing: border-box;    
+    color: transparent;
+    display: block;
+    float: left;
+    height: 15px;      
+    margin: 0 7px 0 8px;
+    text-decoration: none;
+    width: 15px;
+    &.active {
+      border: 3px solid white;
+      background-color: #001d1d;
+    }
+}
+.jcarousel-title{
+  background: url('../img/carousel-bg.png') no-repeat 0 0;  
+  bottom: 42px;
+  height: 197px;
+  left: 35px;
+  position: absolute;
+  width: 308px;
+  &__text {
+    color: #fff;
+    font-family: Ubuntu Medium;  
+    font-size: 54px;
+    padding-left: 25px;
+    text-transform: uppercase;
+    &:first-child {
+      padding-top: 16px;
+      color: #f4b60d
+    }
+  }  
+}
