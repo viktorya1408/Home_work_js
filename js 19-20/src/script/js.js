@@ -20,9 +20,40 @@ $(function() {
          perPage: 1,
          item: function(page) {
              return '<a href="#"></a>';
-         }});
-   
+         }
+    });
 
+// Overlay
+  $('.services__item').hover (
+    function () {
+       $(this).append('<div class="overlay"></div>');
+       $(this).find('.services__item__text').css('color','#f4b60d');
+    },
+    function () {
+       $(this).find('.overlay').remove();
+       $(this).find('.services__item__text').css('color','#fff');       
+    });
+   
+// Accordion
+  var $head = $('.banner').find('.banner__accordion__h');
+  $head.eq(0).addClass('banner__accordion__h--open');
+  $head.eq(0).next('.banner__accordion__text').show();
+  $head.on('click', function(e) {
+    var $text = $(this).next('.banner__accordion__text');
+    if ($(this).hasClass('banner__accordion__h--open')) {
+      $($head).removeClass('banner__accordion__h--open');
+      $text.hide();
+    }
+    else {
+      $('.banner').find('.banner__accordion__h--open').next('.banner__accordion__text').hide();
+      $($head).removeClass('banner__accordion__h--open');
+      $(this).addClass('banner__accordion__h--open');
+      $text.show();
+    }
+  });
+
+
+// Json & Lodash
   $.getJSON('data.json', function(data) {
     var dataSkills = _.map(data, 'skills');
     dataSkills = _.flatten(dataSkills);
