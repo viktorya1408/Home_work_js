@@ -1,0 +1,67 @@
+@import 'partials/reset';
+@import 'partials/bootstrap';
+
+body { 
+  font-family: Arial, sans-serif;
+}
+.templ-test {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+ol {
+  list-style: decimal;
+}
+.overlay {
+  background-color: #000;
+  cursor: pointer;
+  display:none;
+  height: 100%;
+  left: 0;  
+  opacity: 0.7;
+  position: absolute;
+  top: 0;  
+  width: 100%; 
+  z-index: 5;
+}
+.modal-block {
+  background: #5bc0de;
+  border: 1px solid #46b8da;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  height:  300px;
+  left: 50%; 
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  z-index: 10;
+}
+#modal_close {
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  height: 20px;
+  position: absolute;
+  right: 3px;  
+  text-align: center;
+  top: 5px;
+  width: 20px;
+}
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+.modal-h {
+  border-bottom: 1px solid #fff;
+}
+.modal-list {
+  font-size: 16px;
+  margin: 20px 0;
+}
+.modal-item {
+  margin: 15px 165px;
+  text-align: left;
+}
