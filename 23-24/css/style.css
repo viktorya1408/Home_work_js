@@ -1,0 +1,95 @@
+body { 
+  font-family: Arial, sans-serif;
+  min-width: 600px;
+}
+.wrapper {
+  margin: 0 auto;
+  padding-top: 50px;
+}  
+.todo__title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 40px 0;
+  text-align: center;
+}
+.title__item {
+  border: 1px  solid grey;
+  border-radius: 6px;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  position: relative;
+  width: 600px;
+}
+.title__item:hover {
+  box-shadow: 0 0 4px 1px #444343;
+}
+.item-text {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 10px;
+  width: 500px;
+}
+.item-edit {
+  background: url('../img/edit.png') 0 0 no-repeat;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 34px;
+  position: absolute;
+  right: 45px;
+  top: 3px;
+  width: 34px;
+}
+.item-delete {
+  background: url('../img/delete.png') 0 0 no-repeat;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 34px;  
+}
+.controlls {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin: 30px auto;
+  width: 600px;
+}
+.item-value {
+  border: 1px  solid grey;
+  border-radius: 6px;
+  font-size: 16px;
+  outline:none;
+  padding-left: 10px;
+  width: 500px;
+}
+.item-value:hover,
+.item-value:focus {
+  box-shadow: 0 0 4px 1px #444343;
+}
+.item-add {
+  background-color: #ffca28;
+  border: 1px  solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  outline:none;
+  width: 60px;
+}
+.item-add:hover {
+  background-color: #ff8f00;
+}
+.item-input-edit {
+  border: none;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 20px;
+  outline:none;
+  padding: 0 10px;
+  width: 500px; 
+}

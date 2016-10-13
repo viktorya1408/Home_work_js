@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Задание js 23-24</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script data-main="script/app" src="script/require.js"></script>     
+  </head>
+  <body>
+    <script type="text/template" id="wrapper-template">
+      <div class="wrapper">
+        <h1 class="todo__title">To-Do list</h1>
+        <ul class="todo__list"></ul>
+        <div class="controlls">
+          <input type="text" class="item-value" placeholder="Add new To-Do">
+          <button class="item-add">Add</button>
+        </div>
+      </div>
+    </script>
+    <script type="text/template" id="list-template">
+      <% for (var i = 0; i < data.length; i++) {%>
+        <li data-value="<%= data[i] %>" class="title__item">
+          <span class="item-text"> <%= data[i] %> </span>
+           <span class="item-edit"></span>
+           <span class="item-delete"></span>
+        </li>
+      <% }; %>
+    </script>
+    <script type="text/template" id="edit-template">
+      <div class="item-block-edit">
+        <input type="text" class="item-input-edit" id="edit" value="<%= text %>">
+      </div>
+    </script>    
+  </body>
+</html>
