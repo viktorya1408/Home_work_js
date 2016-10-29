@@ -1,0 +1,217 @@
+@media screen and (min-width: 768px) {
+	header {
+	    background-position: 50% 0;
+    	background-size: auto 700px;
+    	height: 700px;
+    	padding: 0 49px;
+	}
+	.header__container {
+		margin: 0 auto;
+		padding-top: 38px;
+		text-align: left;
+	}
+	.header__top {
+		float: right;
+		padding: 0 0 141px;
+	}
+	.reg-link {
+		padding-right: 13px;
+	}
+	.reg-link--sign {
+		margin-right: 1px;
+		padding-right: 17px;
+	}
+	.header__link {
+		padding-top: 9px;
+	}
+	.header__title {
+		font-size: 52px;
+		line-height: 63px;
+		margin: 0 auto;
+		width: 530px;
+	}
+	.header__subtitle {
+		font-size: 24px;
+		line-height: 27px;
+		padding: 24px 0 34px;
+		width: 584px;
+	}
+	.header__btn {
+		width: 226px;
+	}
+	.how-works {
+		&__title {
+			margin: 97px 0 35px;
+			padding-left: 5px;
+		}
+		&__block {
+			height: 410px;
+		}
+	}
+	.partners {
+		padding: 88px 10px 0;
+		&__title {
+			padding-right: 7px;
+		}
+		&__block {
+			padding: 0 117px 0 120px;
+		}
+		&__user {
+			float: left;
+			width: 50%;
+		}
+		&__link {
+			margin: 31px 0 25px;
+		}
+		&__name {
+		margin: 16px 0 13px;			
+		}
+		&__block-other {
+			margin-top: 12px;
+			width: 188px;
+		}
+	}
+	.ideas {
+		padding: 84px 0  10px;
+	    &__title {
+	    	margin-bottom: 35px;
+	    }
+		.grid-sizer {
+			width: 33.33%;
+
+		}
+		.grid-item {
+			height: 310px;
+			margin-bottom: 20px;
+			width: 33.33%;
+			&> a {
+				width: 100%
+			}
+			&:hover {
+ 				transform: scale(1.03);
+ 			}
+		}
+		.grid-item--2 {
+			width: 66.66%;
+		}
+    }
+    .search {
+    	margin-bottom: 90px;
+    	&__title {
+    		margin: 66px 0 33px;
+    	}
+    	&__subtitle {
+    		margin-bottom: 40px;
+    	}
+		&__input-block {
+			&__text {
+				margin: 0 6px 9px 0;			
+				width: 240px;
+			}
+			&__btn {
+				margin-right: 0;
+				width: 160px;
+			}
+		}
+    }
+    .footer__container {
+    	padding-top: 37px;
+		text-align: center;
+		.footer__link {
+			float: left;
+			padding: 0 0 0 40px; 
+ 		}
+		.footer__menu {
+			float: left;
+			margin: 0;
+			padding-bottom: 29px;
+			padding-top: 3px;
+			padding-left: 11%;
+			&__item {
+				display: inline-block;
+				margin-bottom: 12px;
+				text-align: left;
+				vertical-align: top;
+				width: 113px;
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+		.footer__submenu {
+			padding-top: 10px;
+			&__item {
+				display: block;
+				margin: 0;
+			}
+		}
+		.design-by {
+			display: inline-block;
+			float: right;
+			padding-right: 40px;
+			text-align: right;
+			&__title {
+				letter-spacing: 0.1em;
+				padding: 3px 0 8px 0;
+ 			}
+ 		}
+	}
+}
+
+@media screen and (min-width: 940px) {
+	.how-works {
+		&__block {
+			margin: 0 -10px;
+		}
+		&__title {
+			margin-top: 98px;
+			padding-left: 0;
+			padding-right: 3px;
+		}
+	}
+	.partners {
+		padding: 87px 0 0;
+    	&__title {
+    		padding-right: 5px;
+    	}
+		&__block {
+			padding: 0;
+		}
+		&__user {
+			float: left;
+			width: 220px;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+    }
+	.ideas {
+	    &__title {
+	    	padding-right: 3px;
+	    }		
+		&__block {
+			margin: 0 -10px; 
+		}
+    }
+    .search {
+    	margin-bottom: 92px;
+	   	&__subtitle {
+    		padding-right: 3px;
+    	}
+    }
+	.footer__container {
+		.footer__link {
+			padding: 0;
+		}
+		.footer__menu {
+			padding-top: 2px;
+			padding-left: 10.4%;
+			&__item {
+				width: 108px;
+			}
+		}
+		.design-by {
+			padding: 0;
+		}
+	}
+}

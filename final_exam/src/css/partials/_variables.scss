@@ -1,0 +1,30 @@
+$font-t:         Montserrat, Arial, sans-serif;
+$font-st:        'Roboto light', Arial, sans-serif;
+$color-white:  	 #fff;
+$color-red:    	 #ff4e50;
+$color-grey:  	 #333;
+%font-title {
+  font-family: $font-t;
+  font-weight: bold;
+}
+%font-title__grey {
+  color: $color-grey;
+  font-family: $font-t;
+  font-size: 22px;
+  font-weight: 700;
+}
+%font-content {
+  font-family: $font-t;
+  font-size: 14px;
+  font-weight: 700;
+}
+%font-subtitle {
+  font-family: $font-st;
+  font-size: 18px;
+  font-weight: 300;
+}
+%font-text {
+  font-family: $font-st;
+  font-size: 14px;
+  font-weight: 300;
+}

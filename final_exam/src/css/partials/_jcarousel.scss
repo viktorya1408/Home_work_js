@@ -1,0 +1,143 @@
+.jcarousel-wrapper{
+    box-sizing: border-box;
+    height: 240px;
+    margin: 0 auto;
+    margin-bottom:10px;    
+    max-width: 360px;
+    min-width: 236px;
+    padding: 0 10px;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      float: left;
+      height: 400px;
+      width: 33.3%;
+    }
+    .jcarousel {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        ul {
+            height: 100%;
+            margin: 0 0 10px;
+            position: relative;
+            width: 300%;
+        }
+        &-item {
+            height: 100%;
+            float: left;
+            width: 33.3333%;
+            &__content {
+                background: url(../img/slider1.jpg) 57% 77% no-repeat;
+                background-size: auto 115%;
+                border-radius: 4px;
+                box-sizing: border-box;
+                height: 100%;
+                overflow: hidden;
+                padding: 70px 20px 18px;
+                @media screen and (min-width: 768px) {
+                    background-position: 53% 52%;
+                    background-size: auto 111%;  
+                    padding: 212px 16px 18px 18px;
+                }
+                @media screen and (min-width: 940px) {
+                    padding-top: 229px;
+                }
+                &__title {
+                    background-color: #ff4e50;
+                    border-radius: 10px;
+                    color: white;
+                    font-family:  Montserrat;
+                    font-size: 10px;
+                    font-weight: 400;
+                    height: 20px;
+                    letter-spacing: 0.15em;
+                    line-height: 23px;
+                    text-align: center;
+                    text-transform: uppercase;  
+                    width: 70px;            
+                }
+                &__subtitle {
+                    color: white;
+                    font-family: Montserrat;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 27px;
+                    margin: 17px 0 14px;
+                }
+                &__text {
+                    color: #ccc;
+                    font-family: 'Roboto light';
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 16px;
+                }
+            }
+            &__content--step2 {
+                background: url(../img/slider2.jpg) 29% 59% no-repeat;
+                background-size: auto 112%;
+                padding: 100px 20px 18px;
+                .jcarousel-item__content__subtitle {
+                    margin: 16px 0 12px;
+                }
+                @media screen and (min-width: 768px) {
+                    background-position: 44% 40%;    
+                    padding: 260px 16px 18px 19px;
+                }
+                @media screen and (min-width: 940px) {
+                    padding-top: 260px;
+                }
+            }
+            &__content--step3 {
+                background: url(../img/slider3.jpg) 51% 62% no-repeat;                  
+                background-size: auto 116%;
+                @media screen and (min-width: 768px) {
+                    background-position: 49% 62%;
+                    background-size: auto 106%;
+                }
+            }
+        }                 
+        &-control-prev,
+        &-control-next {
+            height: 56px;
+            position: absolute;
+            top: 10%;
+            visibility: hidden;
+            width: 30px;
+            background: url('../img/sprite-arrow.png') -10px -10px no-repeat;
+            @media screen and (min-width: 768px) {
+                visibility: visible;
+            }
+            @media screen and (min-width: 940px) {
+                top: 38%;
+            }
+        }
+        &-control-prev {
+            left: 29px;
+            @media screen and (min-width: 940px) {
+                left: 31px;
+            }            
+            &--2 {
+                left: 20px;
+                @media screen and (min-width: 940px) {
+                    left: 31px;
+                }
+            }
+        }
+
+        &-control-next {
+            background-position: -60px -10px;
+            right: 30px;
+            @media screen and (min-width: 940px) {
+                right: 31px;
+            }            
+            &--2 {
+                right: 20px;
+                @media screen and (min-width: 940px) {
+                    right: 31px;
+                }
+            }           
+        }
+    }
+}
