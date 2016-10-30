@@ -84,11 +84,8 @@
 			height: 310px;
 			margin-bottom: 20px;
 			width: 33.33%;
-			&> a {
-				width: 100%
-			}
 			&:hover {
- 				transform: scale(1.03);
+				transform: scale(1.03);
  			}
 		}
 		.grid-item--2 {

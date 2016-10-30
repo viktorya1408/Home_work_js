@@ -224,30 +224,28 @@ header {
 		padding: 0 10px;
 		text-align: center;
 		width: 100%;
-		&> a {
+		&__link {
+			background: $color-grey;
+			background-position: center center;
+			background-size: cover;
+			border-radius: 4px;
 			display: inline-block;
 			height: 100%;
 			position: relative;
-		}
-		&__img {
-			background: $color-grey;
-			border-radius: 4px;
-			height: 100%;			
 			width: 100%;
+			&__tags {
+				@extend %font-title;
+				color: $color-white;
+				font-size: 22px;
+				left: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);	
+			}
 		}
 		&:hover {
 			transform: scale(1.05);
 			transition: all 1s ease;		
-		}
-		
-		&__tags {
-			@extend %font-title;
-			color: $color-white;
-			font-size: 22px;
-			left: 50%;
-			position: absolute;
-			top: 50%;
-			transform: translate(-50%, -50%);	
 		}
 	}
 }
@@ -335,12 +333,18 @@ footer {
 		}
 	}
 	.footer__submenu {
-		@extend %font-text;
-		color: #666;
-		line-height: 24px;
 		&__item {
 			display: inline-block;
 			margin: 0 5px;
+			&>a {
+				@extend %font-text;
+				color: #666;
+				line-height: 24px;
+				&:hover {
+					color: $color-red;
+	 				transition: color 0.4s;
+				}
+			}
 		}
 	}
 	.design-by {

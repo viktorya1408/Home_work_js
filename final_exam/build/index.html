@@ -185,10 +185,10 @@
         <ul class="footer__menu">
           <li class="footer__menu__item">Company
             <ul class="footer__submenu">
-              <li class="footer__submenu__item">About</li>
-              <li class="footer__submenu__item">Contacts</li>
-              <li class="footer__submenu__item">Press</li>
-              <li class="footer__submenu__item">Blog</li>
+              <li class="footer__submenu__item"><a href="#">About</a></li>
+              <li class="footer__submenu__item"><a href="#">Contacts</a></li>
+              <li class="footer__submenu__item"><a href="#">Press</a></li>
+              <li class="footer__submenu__item"><a href="#">Blog</a></li>
             </ul>
           </li>
           <li class="footer__menu__item">Partners</li>
@@ -204,23 +204,19 @@
       <% for (var i = 0; i < 7; i++) { %>
         <% if (i != 4 &&  i !=5 ) { %>
           <div class="grid-item">
-            <a href="<%= data[i].pageURL %>" target="blank">
-              <img src= "<%= data[i].webformatURL %>" class = "grid-item__img" alt = "">
         <% }
-        else { %> 
+        else { %>
           <div class="grid-item grid-item--2">
-            <a href="<%= data[i].pageURL %>" target="blank">
-              <img src= "<%= data[i].webformatURL %>" class = "grid-item__img" alt = "">
-        <% } %>     
-              <span class="grid-item__tags"><%= data[i].tags %></span>
-            </a>
-          </div>
-      <% }; %>       
+        <% } %>
+          <a href="<%= data[i].pageURL %>" target="blank" class = "grid-item__link" style = "background-image: url(<%= data[i].webformatURL %>)">
+            <span class="grid-item__link__tags"><%= data[i].tags %></span>
+          </a>
+        </div>
+      <% }; %>
     </script>
     <script type="text/template" id="grid-tmpl">
-      <a href="<%= data.pageURL %>" target="blank">
-        <img src= "<%= data.webformatURL %>" class = "grid-item__img" alt = "">
-        <span class="grid-item__tags"><%= data.tags %></span>
+      <a href="<%= data.pageURL %>" target="blank" class = "grid-item__link" style = "background-image: url(<%= data.webformatURL %>)">
+        <span class="grid-item__link__tags"><%= data.tags %></span>
       </a>
     </script>
     <div class="modal">
